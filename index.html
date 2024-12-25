@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>WalletSim</title>
+</head>
+<body>
+    <h1 id="titulo"> Bienvenido a WalletSim</h1>
+    <div id="auth-section">
+        <h2>Registro / Inicio de Sesión</h2>
+        <input type="text" id="username" placeholder="Nombre de usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button id="login-btn">Iniciar Sesión</button>
+        <button id="register-btn">Registrar</button>
+    </div>
+
+    <div id="wallet-section" style="display: none;">
+        <h2>Mi Billetera</h2>
+        <div id="balance">Balance: $0</div>
+        <form id="transaction-form">
+            <input type="number" id="amount" placeholder="Monto" required>
+            <button type="button" id="add-btn">Ingresar Dinero</button>
+            <button type="button" id="withdraw-btn">Retirar Dinero</button>
+            <button type="button" id="transfer-btn">Transferir Dinero</button>
+        </form>
+        <div id="transfer-section" style="display: none;">
+            <input type="text" id="transfer-username" placeholder="Usuario a transferir" required>
+        </div>
+        <ul id="transaction-list"></ul>
+    </div>
+
+    <script async src="main.js"></script>
+</body>
+</html>

@@ -21,6 +21,10 @@ const displayTransactions = () => {
     });
 };
 
+const saveUsersToLocalStorage = () => {
+    localStorage.setItem('users', JSON.stringify(users));
+};
+
 const registerUser  = () => {
     const username = prompt("Ingrese su nombre de usuario:");
     const password = prompt("Ingrese su contraseña:");

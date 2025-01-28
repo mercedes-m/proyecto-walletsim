@@ -91,8 +91,8 @@ const withdrawMoney = () => {
 };
 
 const transferMoney = () => {
-    const amount = parseFloat(prompt("Ingrese el monto a transferir:"));
-    const recipientUsername = prompt("Ingrese el nombre de usuario del destinatario:");
+    const amount = parseFloat(document.getElementById('amount').value);
+    const recipientUsername = document.getElementById('transfer-username').value;
 
     if (amount <= 0) {
         alert('El monto debe ser mayor que cero.');

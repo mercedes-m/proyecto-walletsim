@@ -60,7 +60,7 @@ const loginUser  = () => {
 };
 
 const addMoney = () => {
-    const amount = parseFloat(prompt("Ingrese el monto a ingresar:"));
+    const amount = parseFloat(document.getElementById('amount').value);
     if (amount <= 0) {
         alert('El monto debe ser mayor que cero.');
         return;

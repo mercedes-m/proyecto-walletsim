@@ -26,9 +26,9 @@ const saveUsersToLocalStorage = () => {
 };
 
 const registerUser  = () => {
-    const username = prompt("Ingrese su nombre de usuario:");
-    const password = prompt("Ingrese su contraseña:");
-    const dni = prompt("Ingrese su DNI:");
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const dni = document.getElementById('dni').value;
 
     // Verificar si el usuario ya existe
     if (users.find(user => user.username === username)) {

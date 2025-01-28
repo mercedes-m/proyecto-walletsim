@@ -127,4 +127,4 @@ document.getElementById('transfer-btn').addEventListener('click', transferMoney)
 
 // Mostrar la sección de transferencia solo si se va a transferir dinero
 document.getElementById('transfer-btn').addEventListener('click', () => {
-    document.getElementById('transfer-section').style.display =    
+    document.getElementById('transfer-section').style.display =

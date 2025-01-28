@@ -113,6 +113,7 @@ const transferMoney = () => {
     currentUser .balance = balance;
     recipient.balance += amount;
     transactionList.push(`Transferido: $${amount} a ${recipientUsername}`);
+    saveUsersToLocalStorage();
     updateBalance();
     displayTransactions();
 };

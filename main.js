@@ -73,7 +73,7 @@ const addMoney = () => {
 };
 
 const withdrawMoney = () => {
-    const amount = parseFloat(prompt("Ingrese el monto a retirar:"));
+    const amount = parseFloat(document.getElementById('amount').value);
     if (amount <= 0) {
         alert('El monto debe ser mayor que cero.');
         return;

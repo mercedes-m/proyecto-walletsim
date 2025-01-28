@@ -3,7 +3,7 @@ const titulo = document.getElementById("titulo");
 titulo.textContent = "WalletSim";
 
 let users = JSON.parse(localStorage.getItem('users')) || [];
-let currentUser  = null;
+let currentUser = null;
 let balance = 0;
 const transactionList = [];
 
@@ -25,7 +25,7 @@ const saveUsersToLocalStorage = () => {
     localStorage.setItem('users', JSON.stringify(users));
 };
 
-const registerUser  = () => {
+const registerUser = () => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const dni = document.getElementById('dni').value;
@@ -42,14 +42,14 @@ const registerUser  = () => {
     alert('Usuario registrado con éxito.');
 };
 
-const loginUser  = () => {
+const loginUser = () => {
     const username = document.getElementById('username');
     const password = document.getElementById('password');
 
     // Verificar las credenciales
     const user = users.find(user => user.username === username && user.password === password);
     if (user) {
-        currentUser  = user;
+        currentUser = user;
         balance = user.balance;
         document.getElementById('auth-section').style.display = 'none';
         document.getElementById('wallet-section').style.display = 'block';
@@ -66,7 +66,7 @@ const addMoney = () => {
         return;
     }
     balance += amount;
-    currentUser .balance = balance;
+    currentUser.balance = balance;
     transactionList.push(`Ingresó: $${amount}`);
     updateBalance();
     displayTransactions();
@@ -83,7 +83,7 @@ const withdrawMoney = () => {
         return;
     }
     balance -= amount;
-    currentUser .balance = balance;
+    currentUser.balance = balance;
     transactionList.push(`Retiró: $${amount}`);
     saveUsersToLocalStorage();
     updateBalance();
@@ -110,7 +110,7 @@ const transferMoney = () => {
 
     // Realizar la transferencia
     balance -= amount;
-    currentUser .balance = balance;
+    currentUser.balance = balance;
     recipient.balance += amount;
     transactionList.push(`Transferido: $${amount} a ${recipientUsername}`);
     saveUsersToLocalStorage();
@@ -119,8 +119,8 @@ const transferMoney = () => {
 };
 
 // Asignar eventos a los botones
-document.getElementById('register-btn').addEventListener('click', registerUser );
-document.getElementById('login-btn').addEventListener('click', loginUser );
+document.getElementById('register-btn').addEventListener('click', registerUser);
+document.getElementById('login-btn').addEventListener('click', loginUser);
 document.getElementById('add-btn').addEventListener('click', addMoney);
 document.getElementById('withdraw-btn').addEventListener('click', withdrawMoney);
 document.getElementById('transfer-btn').addEventListener('click', transferMoney);

@@ -38,6 +38,7 @@ const registerUser  = () => {
 
     // Agregar el nuevo usuario al array
     users.push({ username, password, dni, balance: 0 });
+    saveUsersToLocalStorage();
     alert('Usuario registrado con éxito.');
 };
 

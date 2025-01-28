@@ -2,7 +2,7 @@ const titulo = document.getElementById("titulo");
 
 titulo.textContent = "WalletSim";
 
-let users = [];
+let users = JSON.parse(localStorage.getItem('users')) || [];
 let currentUser  = null;
 let balance = 0;
 const transactionList = [];

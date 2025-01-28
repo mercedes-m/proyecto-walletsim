@@ -85,6 +85,7 @@ const withdrawMoney = () => {
     balance -= amount;
     currentUser .balance = balance;
     transactionList.push(`Retiró: $${amount}`);
+    saveUsersToLocalStorage();
     updateBalance();
     displayTransactions();
 };

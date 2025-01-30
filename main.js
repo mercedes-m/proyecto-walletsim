@@ -28,7 +28,6 @@ const registerUser = () => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-
     // Verificar si el usuario ya existe
     if (users.find(user => user.username === username)) {
         alert('El usuario ya existe.');
@@ -36,7 +35,7 @@ const registerUser = () => {
     }
 
     // Agregar el nuevo usuario al array
-    users.push({ username, password, dni, balance: 0 });
+    users.push({ username, password, balance: 0 });
     saveUsersToLocalStorage();
     alert('Usuario registrado con éxito.');
 };

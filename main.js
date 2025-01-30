@@ -12,7 +12,7 @@ const updateBalance = () => {
 
 const displayTransactions = () => {
     const list = document.getElementById('transaction-list');
-    list.innerHTML = = '';
+    list.innerHTML ='';
     transactionList.forEach((transaction) => {
         const listItem = document.createElement('li');
         listItem.innerText = transaction;
@@ -82,7 +82,7 @@ const withdrawMoney = () => {
         return;
     }
     balance -= amount;
-    currentUser.balance = balance;
+    currentUser.balance = balance; //Actualiza el saldo del usuario
     transactionList.push(`Retiró: $${amount}`);
     saveUsersToLocalStorage();
     updateBalance();

@@ -1,5 +1,4 @@
 const titulo = document.getElementById("titulo");
-
 titulo.textContent = "WalletSim";
 
 let users = JSON.parse(localStorage.getItem('users')) || [];
@@ -13,8 +12,8 @@ const updateBalance = () => {
 
 const displayTransactions = () => {
     const list = document.getElementById('transaction-list');
-    list.innerHTML = '';
-    transactionList.forEach((transaction, index) => {
+    list.innerHTML = = '';
+    transactionList.forEach((transaction) => {
         const listItem = document.createElement('li');
         listItem.innerText = transaction;
         list.appendChild(listItem);

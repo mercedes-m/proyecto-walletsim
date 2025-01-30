@@ -122,7 +122,6 @@ document.getElementById('register-btn').addEventListener('click', registerUser);
 document.getElementById('login-btn').addEventListener('click', loginUser);
 document.getElementById('add-btn').addEventListener('click', addMoney);
 document.getElementById('withdraw-btn').addEventListener('click', withdrawMoney);
-document.getElementById('transfer-btn').addEventListener('click', transferMoney);
 
 // Mostrar la sección de transferencia solo si se va a transferir dinero
 document.getElementById('transfer-btn').addEventListener('click', () => {

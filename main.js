@@ -64,8 +64,9 @@ const addMoney = () => {
         return;
     }
     balance += amount;
-    currentUser.balance = balance;
+    currentUser.balance = balance; //Actualiza el saldo del usuario
     transactionList.push(`Ingresó: $${amount}`);
+    saveUsersToLocalStorage(); // Guarda el usuario actualizado
     updateBalance();
     displayTransactions();
 };

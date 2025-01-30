@@ -41,8 +41,8 @@ const registerUser = () => {
 };
 
 const loginUser = () => {
-    const username = document.getElementById('username');
-    const password = document.getElementById('password');
+    const username = document.getElementById('username').value
+    const password = document.getElementById('password').value
 
     // Verificar las credenciales
     const user = users.find(user => user.username === username && user.password === password);

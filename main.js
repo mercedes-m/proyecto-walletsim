@@ -172,6 +172,13 @@ const transferMoney = () => {
     saveUsersToLocalStorage();
     updateBalance();
     displayTransactions();
+
+    Swal.fire({
+        title: 'Éxito',
+        text: `Has transferido $${amount} a ${recipientUsername}.`,
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    });
 };
 
 // Asignar eventos a los botones

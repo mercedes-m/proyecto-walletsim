@@ -30,7 +30,12 @@ const registerUser = () => {
 
     // Verificar si el usuario ya existe
     if (users.find(user => user.username === username)) {
-        alert('El usuario ya existe.');
+        Swal.fire({
+            title: 'Error',
+            text: 'El usuario ya existe.',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
         return;
     }
 

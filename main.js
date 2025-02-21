@@ -89,6 +89,12 @@ const addMoney = () => {
     saveUsersToLocalStorage(); // Guarda el usuario actualizado
     updateBalance();
     displayTransactions();
+    Swal.fire({
+        title: 'Éxito',
+        text: `Has ingresado $${amount} a tu billetera.`,
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    });
 };
 
 const withdrawMoney = () => {

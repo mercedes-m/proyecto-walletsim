@@ -42,7 +42,12 @@ const registerUser = () => {
     // Agregar el nuevo usuario al array
     users.push({ username, password, balance: 0 });
     saveUsersToLocalStorage();
-    alert('Usuario registrado con éxito.');
+    Swal.fire({
+        title: 'Éxito',
+        text: 'Usuario registrado con éxito.',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    });
 };
 
 const loginUser = () => {

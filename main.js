@@ -155,7 +155,12 @@ const transferMoney = () => {
     }
     const recipient = users.find(user => user.username === recipientUsername);
     if (!recipient) {
-        alert('El usuario no existe.');
+        Swal.fire({
+            title: 'Error',
+            text: 'El usuario no existe.',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
         return;
     }
 

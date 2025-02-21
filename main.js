@@ -100,7 +100,12 @@ const addMoney = () => {
 const withdrawMoney = () => {
     const amount = parseFloat(document.getElementById('amount').value);
     if (amount <= 0) {
-        alert('El monto debe ser mayor que cero.');
+        Swal.fire({
+            title: 'Error',
+            text: 'El monto debe ser mayor que cero.',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
         return;
     }
     if (amount > balance) {

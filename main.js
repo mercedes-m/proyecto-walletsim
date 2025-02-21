@@ -123,6 +123,12 @@ const withdrawMoney = () => {
     saveUsersToLocalStorage();
     updateBalance();
     displayTransactions();
+    Swal.fire({
+        title: 'Éxito',
+        text: `Has retirado $${amount} de tu billetera.`,
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    });
 };
 
 const transferMoney = () => {

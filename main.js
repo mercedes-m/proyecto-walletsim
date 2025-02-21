@@ -63,7 +63,12 @@ const loginUser = () => {
         document.getElementById('wallet-section').style.display = 'block';
         updateBalance();
     } else {
-        alert('Nombre de usuario o contraseña incorrectos.');
+        Swal.fire({
+            title: 'Error',
+            text: 'Nombre de usuario o contraseña incorrectos.',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
     }
 };
 

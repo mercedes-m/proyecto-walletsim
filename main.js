@@ -109,7 +109,12 @@ const withdrawMoney = () => {
         return;
     }
     if (amount > balance) {
-        alert('No hay suficiente saldo.');
+        Swal.fire({
+            title: 'Error',
+            text: 'No hay suficiente saldo.',
+            icon: 'error',
+            confirmButtonText: 'Aceptar'
+        });
         return;
     }
     balance -= amount;

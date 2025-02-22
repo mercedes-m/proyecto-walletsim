@@ -33,7 +33,7 @@ const loadUsersFromAPI = async () => {
         const response = await fetch('https://jsonplaceholder.typicode.com/users');
         const data = await response.json();
         
-        // Transformar los datos para que coincidan con tu estructura
+        // Transformar los datos para que coincidan con la estructura
         users = data.map(user => ({
             username: user.username,
             password: 'defaultPassword', // establecer una contraseña predeterminada

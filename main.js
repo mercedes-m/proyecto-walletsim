@@ -6,10 +6,12 @@ let currentUser = null;
 let balance = 0;
 const transactionList = [];
 
+// Función para actualizar el balance en la interfaz
 const updateBalance = () => {
     document.getElementById('balance').innerText = `Balance: $${balance}`;
 };
 
+// Función para mostrar las transacciones en la interfaz
 const displayTransactions = () => {
     const list = document.getElementById('transaction-list');
     list.innerHTML ='';
@@ -20,10 +22,31 @@ const displayTransactions = () => {
     });
 };
 
+// Función para guardar usuarios en localStorage
 const saveUsersToLocalStorage = () => {
     localStorage.setItem('users', JSON.stringify(users));
 };
 
+// Función para cargar usuarios desde una API
+const loadUsersFromAPI = async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await response.json();
+        
+        // Transformar los datos para que coincidan con tu estructura
+        users = data.map(user => ({
+            username: user.username,
+            password: 'defaultPassword', // Puedes establecer una contraseña predeterminada
+            balance: 0
+        }));
+
+        saveUsersToLocalStorage(); // Guardar en localStorage
+    } catch (error) {
+        console.error('Error al cargar usuarios:', error);
+    }
+};
+
+// Función para registrar un nuevo usuario
 const registerUser = () => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -50,6 +73,7 @@ const registerUser = () => {
     });
 };
 
+// Función para iniciar sesión
 const loginUser = () => {
     const username = document.getElementById('username').value
     const password = document.getElementById('password').value
@@ -72,6 +96,7 @@ const loginUser = () => {
     }
 };
 
+// Función para agregar dinero
 const addMoney = () => {
     const amount = parseFloat(document.getElementById('amount').value);
     if (amount <= 0) {
@@ -97,6 +122,7 @@ const addMoney = () => {
     });
 };
 
+// Función para retirar dinero
 const withdrawMoney = () => {
     const amount = parseFloat(document.getElementById('amount').value);
     if (amount <= 0) {
@@ -131,6 +157,7 @@ const withdrawMoney = () => {
     });
 };
 
+// Función para transferir dinero
 const transferMoney = () => {
     const amount = parseFloat(document.getElementById('amount').value);
     const recipientUsername = document.getElementById('transfer-username').value;

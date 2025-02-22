@@ -36,7 +36,7 @@ const loadUsersFromAPI = async () => {
         // Transformar los datos para que coincidan con tu estructura
         users = data.map(user => ({
             username: user.username,
-            password: 'defaultPassword', // Puedes establecer una contraseña predeterminada
+            password: 'defaultPassword', // establecer una contraseña predeterminada
             balance: 0
         }));
 
@@ -219,3 +219,6 @@ document.getElementById('confirm-transfer-btn').addEventListener('click', transf
 document.getElementById('transfer-btn').addEventListener('click', () => {
     document.getElementById('transfer-section').style.display = 'block'
 });   
+
+// Llamar a la función para cargar usuarios al iniciar la aplicación
+loadUsersFromAPI();

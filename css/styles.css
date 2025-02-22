@@ -15,28 +15,27 @@ body {
     padding: 20px;
 }
 
-#auth-section {
-    display: flex; /* Usar flexbox para alinear elementos */
-    flex-direction: column; /* Colocar elementos en columna */
-    align-items: flex-start; /* Alinear a la izquierda */
+#titulo {
+    text-align: center;
+    color: #6a5acd; /* Color pastel */
+    margin-bottom: 20px;
+}
+
+#auth-section, #wallet-section {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
     max-width: 400px;
-}
-
-#titulo {
-    text-align: left;
-    color: #6a5acd; /* Color pastel */
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
 }
 
 h2 {
     color: #ff69b4; /* Color pastel */
-    text-align: left;
-    margin-bottom: 15px;
+    text-align: center;
 }
 
 input[type="text"], input[type="password"], input[type="number"] {

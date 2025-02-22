@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>WalletSim</title>
 </head>
+
 <body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <div id="auth-section"></div>
+    <div id="header">
     <h1 id="titulo">WalletSim</h1>
-        <h2>Registro / Inicio de Sesión</h2>
-        <input type="text" id="username" placeholder="Nombre de usuario" required>
-        <input type="password" id="password" placeholder="Contraseña" required>
-        <button id="login-btn">Iniciar Sesión</button>
-        <button id="register-btn">Registrar</button>
+    <div id="auth-section"></div>
+    <h2>Registro / Inicio de Sesión</h2>
+    <input type="text" id="username" placeholder="Nombre de usuario" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <button id="login-btn">Iniciar Sesión</button>
+    <button id="register-btn">Registrar</button>
     </div>
 
     <div id="wallet-section" style="display: none;">
@@ -36,4 +39,5 @@
 
     <script async src="main.js"></script>
 </body>
+
 </html>

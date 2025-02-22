@@ -220,5 +220,5 @@ document.getElementById('transfer-btn').addEventListener('click', () => {
     document.getElementById('transfer-section').style.display = 'block'
 });   
 
-// Llamar a la función para cargar usuarios al iniciar la aplicación
+// Llama a la función para cargar usuarios al iniciar la aplicación
 loadUsersFromAPI();

@@ -16,9 +16,9 @@ body {
 }
 
 #titulo {
-    text-align: center;
+    text-align: left;
     color: #6a5acd; /* Color pastel */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #auth-section, #wallet-section {
